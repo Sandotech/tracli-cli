@@ -2,7 +2,7 @@
   "name": "tracli-cli",
   "version": "0.1.0",
   "description": "The zero-friction work logger for terminal-first developers.",
-  "private": true,
+  "private": false,
   "license": "MIT",
   "type": "commonjs",
   "bin": {
