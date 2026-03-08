@@ -1,5 +1,5 @@
 {
-  "name": "tracli-cli",
+  "name": "@sandotech/tracli-cli",
   "version": "0.1.0",
   "description": "The zero-friction work logger for terminal-first developers.",
   "private": false,
@@ -12,7 +12,8 @@
     "clean": "node -e \"require('node:fs').rmSync('dist', { recursive: true, force: true })\"",
     "build": "tsc -p tsconfig.json && tsc-alias -p tsconfig.json",
     "typecheck": "tsc -p tsconfig.json --noEmit",
-    "dev": "tsx src/interfaces/cli/bin.ts"
+    "dev": "tsx src/interfaces/cli/bin.ts",
+    "prepack": "npm run clean && npm run build"
   },
   "dependencies": {
     "cli-table3": "^0.6.5",
@@ -26,5 +27,17 @@
   },
   "engines": {
     "node": ">=18"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Sandotech/tracli-cli.git"
   }
 }
