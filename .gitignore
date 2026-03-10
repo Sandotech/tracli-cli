@@ -12,4 +12,4 @@ pnpm-debug.log*
 data/
 
 # Dependency lock files
-package-lock.json
+coverage/
